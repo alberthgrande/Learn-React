@@ -15,6 +15,16 @@ function App() {
           </figure>
         </div>
       </header>
+
+      <main>
+
+      </main>
+
+      <footer>
+        <div>
+          &copy; Alberth G. Ruado
+        </div>
+      </footer>
     </div>
   );
 }
