@@ -1,0 +1,15 @@
+:root {
+	--clr-white: #fff;
+
+	/*font size*/
+	--fs-h3: 1.25rem;
+}
+
+.footer {
+	background: #343a40;
+	color: var(--clr-white);
+	text-align: center;
+	padding: 2.5em 0;
+	font-size: var(--fs-h3);
+	margin-bottom: -2rem;
+}
