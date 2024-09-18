@@ -9,6 +9,13 @@ class Developer {
     }
 }
 
-var fullname = new Developer("Alberth", "Ruado");
+class ReactDeveloper extends Developer {
+    getJob() {
+        return `React Developer`;
+    }
+}
 
-console.log(fullname.getFullname());
+var me = new ReactDeveloper("Alberth", "Ruado");
+
+console.log(me.getFullname());
+console.log(me.getJob());
