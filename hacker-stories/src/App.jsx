@@ -3,6 +3,8 @@ import BeginnerVariables from "./components/BeginnerVariables";
 import AdvancedVariables from "./components/AdvancedVariables";
 import HelloWorld from "./components/HelloWorld";
 import ReactList from "./components/ReactList";
+import Search from "./components/Search";
+import ReactProps from "./components/ReactProps";
 
 function App() {
   return (
@@ -14,6 +16,10 @@ function App() {
       <HelloWorld />
       <hr />
       <ReactList />
+      <hr />
+      <Search />
+      <hr />
+      <ReactProps />
     </>
   );
 }
