@@ -5,6 +5,7 @@ import HelloWorld from "./components/HelloWorld";
 import ReactList from "./components/ReactList";
 // import Search from "./components/Search";
 import ReactProps from "./components/ReactProps";
+import ReactLiftingState from "./components/ReactLiftingState";
 
 function App() {
   const handleChange = (event) => {
@@ -23,6 +24,8 @@ function App() {
       <Search onSearch={handleChange} />
       <hr />
       <ReactProps />
+      <hr />
+      <ReactLiftingState />
     </>
   );
 }
