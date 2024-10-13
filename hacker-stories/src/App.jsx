@@ -8,6 +8,9 @@ import ReactProps from "./components/ReactProps";
 import ReactLiftingState from "./components/ReactLiftingState";
 import ReactControlledComponents from "./components/ReactControlledComponents";
 
+// css
+import "./App.css";
+
 function App() {
   const handleChange = (event) => {
     console.log(event.target.value);
