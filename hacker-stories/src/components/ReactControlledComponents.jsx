@@ -28,7 +28,9 @@ const ReactControlledComponents = () => {
   const filteredStories = stories.filter(
     (story) =>
       story.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      story.author.toLowerCase().includes(searchTerm.toLowerCase())
+      story.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      story.num_comments === Number(searchTerm) ||
+      story.points === Number(searchTerm)
   );
 
   return (
@@ -44,7 +46,7 @@ const ReactControlledComponents = () => {
 const Search = (props) => {
   return (
     <div>
-      <label htmlFor="search">Search</label>
+      <label htmlFor="search">Search:</label>
       <input
         type="text"
         id="search"
@@ -67,13 +69,14 @@ const List = (props) => {
 
 const Item = (props) => {
   return (
-    <li>
+    <li className="itemList">
       <span>
-        <a href={props.item.url}>{props.item.title}</a>
+        Title : <a href={props.item.url}>{props.item.title}</a>
       </span>
-      <span>{props.item.author}</span>
-      <span>{props.item.num_comments}</span>
-      <span>{props.item.points}</span>
+      <br />
+      <span>Author : {props.item.author}</span> <br />
+      <span>Number Comments : {props.item.num_comments}</span> <br />
+      <span>Points : {props.item.points}</span>
     </li>
   );
 };
