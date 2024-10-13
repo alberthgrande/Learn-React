@@ -53,7 +53,7 @@ const Search = ({ search, onSearch }) => {
   );
 };
 
-// Variation 1: Nested Destructuring
+// Variation 1: Spread and Rest Operators
 // const List = ({ list }) => {
 //   return (
 //     <div>
@@ -78,19 +78,44 @@ const Search = ({ search, onSearch }) => {
 //   </li>
 // );
 
-// Variation 2: Nested Destructuring
+// Variation 2: Spread and Rest Operators
+// const List = ({ list }) => {
+//   return (
+//     <ul>
+//       {list.map((item) => (
+//         <Item
+//           key={item.objectID}
+//           url={item.url}
+//           title={item.title}
+//           author={item.author}
+//           num_comments={item.num_comments}
+//           points={item.points}
+//         />
+//       ))}
+//     </ul>
+//   );
+// };
+
+// const Item = ({ title, url, author, num_comments, points }) => {
+//   return (
+//     <li className="itemList">
+//       <span>
+//         Title : <a href={url}>{title}</a>
+//       </span>
+//       <br />
+//       <span>Author : {author}</span>  <br />
+//       <span>Number Comments : {num_comments}</span> <br />
+//       <span>Points : {points}</span>  <br />
+//     </li>
+//   );
+// };
+
+// Variation 3: Spread and Rest Operators
 const List = ({ list }) => {
   return (
     <ul>
       {list.map((item) => (
-        <Item
-          key={item.objectID}
-          url={item.url}
-          title={item.title}
-          author={item.author}
-          num_comments={item.num_comments}
-          points={item.points}
-        />
+        <Item key={item.objectID} {...item} />
       ))}
     </ul>
   );
@@ -103,12 +128,9 @@ const Item = ({ title, url, author, num_comments, points }) => {
         Title : <a href={url}>{title}</a>
       </span>
       <br />
-      <span>Author : {author}</span>
-      <br />
-      <span>Number Comments : {num_comments}</span>
-      <br />
-      <span>Points : {points}</span>
-      <br />
+      <span>Author : {author}</span> <br />
+      <span>Number Comments : {num_comments}</span> <br />
+      <span>Points : {points}</span> <br />
     </li>
   );
 };
