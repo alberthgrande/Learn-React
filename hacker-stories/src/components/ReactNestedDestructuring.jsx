@@ -111,15 +111,25 @@ const Search = ({ search, onSearch }) => {
 // };
 
 // Variation 3: Spread and Rest Operators
-const List = ({ list }) => {
-  return (
-    <ul>
-      {list.map((item) => (
-        <Item key={item.objectID} {...item} />
-      ))}
-    </ul>
-  );
-};
+// const List = ({ list }) => {
+//   return (
+//     <ul>
+//       {list.map((item) => (
+//         <Item key={item.objectID} {...item} />
+//       ))}
+//     </ul>
+//   );
+// };
+
+// Variation 4: Spread and Rest Operators
+// Final Step
+const List = ({ list }) => (
+  <ul>
+    {list.map(({ objectID, ...item }) => (
+      <Item key={objectID} {...item} />
+    ))}
+  </ul>
+);
 
 const Item = ({ title, url, author, num_comments, points }) => {
   return (
