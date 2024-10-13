@@ -7,6 +7,7 @@ import ReactList from "./components/ReactList";
 import ReactProps from "./components/ReactProps";
 import ReactLiftingState from "./components/ReactLiftingState";
 import ReactControlledComponents from "./components/ReactControlledComponents";
+import ReactPropsHandlingAdvance from "./components/ReactPropsHandlingAdvance";
 
 // css
 import "./App.css";
@@ -17,6 +18,8 @@ function App() {
   };
   return (
     <>
+      <ReactPropsHandlingAdvance />
+      <hr />
       <BeginnerVariables />
       <hr />
       <AdvancedVariables />
@@ -32,6 +35,7 @@ function App() {
       <ReactLiftingState />
       <hr />
       <ReactControlledComponents />
+      <hr />
     </>
   );
 }
