@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./App.css"; // css
 import BeginnerVariables from "./components/BeginnerVariables";
 import AdvancedVariables from "./components/AdvancedVariables";
 import HelloWorld from "./components/HelloWorld";
@@ -8,9 +9,7 @@ import ReactProps from "./components/ReactProps";
 import ReactLiftingState from "./components/ReactLiftingState";
 import ReactControlledComponents from "./components/ReactControlledComponents";
 import ReactPropsHandlingAdvance from "./components/ReactPropsHandlingAdvance";
-
-// css
-import "./App.css";
+import ReactNestedDestructuring from "./components/ReactNestedDestructuring";
 
 function App() {
   const handleChange = (event) => {
@@ -18,6 +17,8 @@ function App() {
   };
   return (
     <>
+      <ReactNestedDestructuring />
+      <hr />
       <ReactPropsHandlingAdvance />
       <hr />
       <BeginnerVariables />
